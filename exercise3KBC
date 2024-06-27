@@ -23,10 +23,10 @@ for i in range(10):
     question = questions[i]
     print("\nQuestion for Rs.", levels[i])
     print(question[0])
-    print("a.", question[1])
-    print("b.", question[2])
-    print("c.", question[3])
-    print("d.", question[4])
+    print(1, question[1])
+    print(2, question[2])
+    print(3, question[3])
+    print(4, question[4])
     reply = int(input("select the correct option (1-4): "))
     if(reply==question[5]):
         print("Correct Answer. You've won Rs.", levels[i] )
