@@ -1,0 +1,63 @@
+# KBC game by using Python
+
+print("\n\nWELCOME TO \"KAUN BANEGA CROREPATI\"")
+Name = input("Enter Your Name: ")
+questions = [
+    ["2, 6, 12, 20,.....", 28, 30, 32, 36, 2],
+    ["Find the next number in the series: 64, 58, 52, 46, ?", 40, 38, 42, 44, 1], 
+    ["Find the next number in the series: 3, 9, 27, 81, ?", 121, 262, 243, 154, 3], 
+    ["Find the next number in the series: 625, 125, 25, 5, ?", 2, 1, 4, 3, 2], 
+    ["Find the next number in the series: 1, 4, 9, 16, ?", 20, 25, 30, 26, 2], 
+    ["Find the next number in the series: 8, 27, 64, 125, ?", 200, 216, 256, 154, 2], 
+    ["Find the next number in the series: 0, 1, 1, 2, 3, 5, ?", 6, 7, 8, 9, 3], 
+    ["Find the next number in the series: 4, 9, 6, 11, 8, ?", 7, 12, 13, 9, 3], 
+    ["Find the next number in the series: 12, 7, 21, 16, 30, ?", 35, 40, 25, 45, 3], 
+    ["2, 5, 9, 19, 37, ??", 45, 56, 75, 67, 3]
+]
+
+levels = [5000, 10000, 25000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 70000000]
+
+
+
+for i in range(10):
+    question = questions[i]
+    print("\nQuestion for Rs.", levels[i])
+    print(question[0])
+    print("a.", question[1])
+    print("b.", question[2])
+    print("c.", question[3])
+    print("d.", question[4])
+    reply = int(input("select the correct option (1-4): "))
+    if(reply==question[5]):
+        print("Correct Answer. You've won Rs.", levels[i] )
+    else:
+        print("\nWrong Answer! Better luck next time.")   
+        break
+    
+if(i==0):
+    print("YOU'VE WON RS.0")
+elif(i==9):
+    print("Congratulation,", Name,  "You've have won RS.", levels[9])   
+else:
+    print("YOU'VE WON RS.", levels[i - 1])   
+
+
+
+
+          
+        
+
+
+
+    
+
+
+
+    
+
+        
+
+           
+
+
+    
