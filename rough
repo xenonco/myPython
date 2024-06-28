@@ -1,0 +1,10 @@
+def f(n):
+    if(n==0):
+        return 0
+    elif(n==1):
+        return 1
+    elif(n>0 and n!=1):
+        return f(n-1) + f(n-2) 
+    else:
+        print("negative values are not allowed.")    
+print(f(78))
