@@ -1,0 +1,24 @@
+# simple calculator in python
+print("HI, I AM CALCI")
+while True:
+    a = float(input("Enter The First Number: "))
+    b = float(input("Enter The Second Number: "))
+    print("choose 1 For Addition")
+    print("choose 2 For Substraction")
+    print("choose 3 For Multiplication")
+    print("choose 4 For Division")
+    c = int(input("Enter Your Choice:- "))
+    if(c==1):
+        print(f"The Sum of Given Two Numbers is {a + b}")
+    elif(c==2):
+        print(f"The Difference of Given Two Numbers is {a - b}")
+    elif(c==3):
+        print(f"The Product of Given Two Numbers is {a * b}")
+    elif(c==4):
+        print(f"The Division of Given Two Numbers is {a / b}")
+    elif(c==5):
+        print("Exiting The Calci. Goodbye!")
+        break                  
+    else:
+        print("Wrong Entry Try again!")  
+
