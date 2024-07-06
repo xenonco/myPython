@@ -1,4 +1,4 @@
-# stone-paper-scissor game:
+# stone-paper-scissor game:    LAYOUT-1
 import random
 score = 0
 def Score(a,b):
@@ -46,3 +46,86 @@ while True:
     finalscore = finalscore + score
     print(f"SCORE: {finalscore}")
 print(f"your final score is: {finalscore}")
+
+# stone-paper-scissor game:    LAYOUT-2
+import random
+score = 0
+def Score(a,b):
+    global score
+    if(a=="stone" and b=="stone"):
+        print("draw")
+        score = 0
+    elif(a=="stone" and b=="paper"):
+        print("you lose")
+        score = -1
+    elif(a=="stone" and b=="scissor"):
+        print("you won")
+        score = +1
+    elif(a=="paper" and b=="stone"):
+        print("you won")
+        score = +1
+    elif(a=="paper" and b=="paper"):
+        print("draw")
+        score = 0
+    elif(a=="paper" and b=="scissor"):
+        print("you lose")
+        score = -1
+    elif(a=="scissor" and b=="stone"):
+        print("you lose")
+        score = -1
+    elif(a=="scissor" and b=="paper"):
+        print("you won")
+        score = +1
+    elif(a=="scissor" and b=="scissor"):
+        print("draw")
+        score = 0
+finalscore = 0
+choices = ["stone", "paper", "scissor"]
+print("\nWelcome To The Stone-Paper-Scissor Game\n")
+while True:
+    print("Type stone For Stone")
+    print("Choose paper For Paper")
+    print("Choose scissor For Scissor")
+    print("Choose quit To Quit")
+    usermove = input("Enter Your Choice: ")
+    if (usermove=="quit"):
+      break
+    compmove = random.choice(choices)
+    print(f"Computer's Choice: {compmove}")
+    Score(usermove, compmove)
+    finalscore = finalscore + score
+    print(f"SCORE: {finalscore}")
+print(f"your final score is: {finalscore}")
+    
+    
+    
+
+
+
+
+    
+
+
+
+
+        
+    
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
