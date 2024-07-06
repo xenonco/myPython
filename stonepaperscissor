@@ -1,0 +1,48 @@
+# stone-paper-scissor game:
+import random
+score = 0
+def Score(a,b):
+    global score
+    if(a==1 and b==1):
+        print("draw")
+        score = 0
+    elif(a==1 and b==2):
+        print("you lose")
+        score = -1
+    elif(a==1 and b==3):
+        print("you won")
+        score = +1
+    elif(a==2 and b==1):
+        print("you won")
+        score = +1
+    elif(a==2 and b==2):
+        print("draw")
+        score = 0
+    elif(a==2 and b==3):
+        print("you lose")
+        score = +1
+    elif(a==3 and b==1):
+        print("you lose")
+        score = -1
+    elif(a==3 and b==2):
+        print("you won")
+        score = +1
+    elif(a==3 and b==3):
+        print("draw")
+        score = 0
+finalscore = 0
+print("\nWelcome To The Stone-Paper-Scissor Game\n")
+while True:
+    print("Choose 1 For Stone")
+    print("Choose 2 For Paper")
+    print("Choose 3 For Scissor")
+    print("Choose 4 To Quit")
+    usermove = int(input("Enter Your Choice: "))
+    if (usermove==4):
+      break
+    compmove = random.randint(1,3)
+    print(f"Computer's Choice: {compmove}")
+    Score(usermove, compmove)
+    finalscore = finalscore + score
+    print(f"SCORE: {finalscore}")
+print(f"your final score is: {finalscore}")
